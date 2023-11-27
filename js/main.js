@@ -59,6 +59,7 @@ function formSubmitted(event) {
             promo = totalPrice * 0.25;
             totalPrice = totalPrice - promo;
             foundCode = true
+            document.getElementById("FormDiscountCode").style.color = 'blue'
             console.log("CODICE SCONTO VALIDO");
             delete listOfDiscountCodes[i];
             console.log("Il prezzo scontato è:" + " " + totalPrice.toFixed(2))
