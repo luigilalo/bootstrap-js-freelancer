@@ -73,3 +73,5 @@ if (foundCode == false)
 
 document.getElementById("result").innerHTML = "Prezzo totale: € " + totalPrice.toFixed(2);
 }
+
+// SUPER BONUS TO DO
