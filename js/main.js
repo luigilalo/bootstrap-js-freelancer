@@ -12,6 +12,7 @@ function formSubmitted(event) {
 
     let totalPrice = 0
     let promo = 0 
+    let foundCode = false
 
     // NOME
      let inputName= document.getElementById("FormFirstName").value;
@@ -46,17 +47,25 @@ function formSubmitted(event) {
      totalPrice = frontEnd * hoursOfWork 
      console.log(totalPrice.toFixed(2))
     }
-     else {totalPrice = dataAnalyst * hoursOfWork
+     else if (typeOfWork == "data") {
+        totalPrice = dataAnalyst * hoursOfWork
            console.log(totalPrice.toFixed(2))
     }
+     if (discountCode != "") {
 
     // CONTROLLO SE IL DISCOUNT CODE INSERITO E' PRESENTE NELL'ARRAY
     for (let i = 0; i < listOfDiscountCodes.length; i++) {
         if (listOfDiscountCodes[i] == discountCode) {
             promo = totalPrice * 0.25;
             totalPrice = totalPrice - promo;
+            foundCode = true
             console.log("CODICE SCONTO VALIDO");
+            delete listOfDiscountCodes[i];
             console.log("Il prezzo scontato è:" + " " + totalPrice.toFixed(2))
         }
 }
+if (foundCode == false)
+{alert("IL CODICE SCONTO NON E' VALIDO")} }
+
+document.getElementById("result").innerHTML = "Prezzo totale: € " + totalPrice.toFixed(2);
 }
