@@ -7,9 +7,26 @@ const frontEnd = 15.30;
 const dataAnalyst = 33.60;
 
 // Dati dal form 
-function formSubmitted(event){
+function formSubmitted(event) {
     event.preventDefault();
 
-
-
+    // NOME
+     let inputName= document.getElementById("FormFirstName").value;
+     console.log(inputName);
+ 
+     // COGNOME
+     let inputLastName = document.getElementById("FormLastName").value;
+     console.log(inputLastName);
+ 
+     // EMAIL
+     let email = document.getElementById("inputEmailAddress").value;
+     console.log(email);
+ 
+     // ORA LAVORATIVE
+     let hoursOfWork = document.getElementById("FormHours").value;
+     console.log(parseInt(hoursOfWork));
+ 
+     // LAVORO RICHIESTO
+     let typeOfWork = document.getElementById("ChoosenWork").value;
+     console.log(typeOfWork);
 }
