@@ -130,7 +130,7 @@
                             <div class="col-md-12 mt-3">
                                 <h4 class="text-center"> WANT AN OFFER? </h4>
                             </div>
-                            <form class="d-flex flex-wrap">
+                            <form id="form" onsubmit="formSubmitted(event)">
                             <div class="col-md-6 mb-2">
                                 <label for="FormFirstName" class="form-label mgnlbl">First Name</label>
                                 <input type="text" class="form-control" id="FormFirstName" placeholder="Enter your first name...">
@@ -148,12 +148,12 @@
                                     <input type="number" min="1" class="form-control" id="FormHours" placeholder="Hours requested..">
                                     </div>
                                     <div class="col-md-6 mb-2">
-                                        <label for="InputTypeOFWork" class="form-label mgnlbl">Type of Work</label>
+                                        <label for="InputTypeOFWork" class="form-label mgnlbl" id="ChoosenWork">Type of Work</label>
                                         <select class="form-select" aria-label="Type Of Work">
                                             <option selected>Select the type of work</option>
-                                            <option value="1">Backed Development</option>
-                                            <option value="2">Frontend Development</option>
-                                            <option value="3">Data Analyst</option>
+                                            <option value="backend">Backend Development</option>
+                                            <option value="frontend">Frontend Development</option>
+                                            <option value="data">Data Analyst</option>
                                           </select>
                                       </div>
                                       <div class="col-md-6  mb-2">
