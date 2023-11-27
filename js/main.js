@@ -65,7 +65,10 @@ function formSubmitted(event) {
         }
 }
 if (foundCode == false)
-{alert("IL CODICE SCONTO NON E' VALIDO")} }
+{   // COLORO DI ROSSO IL CODICE
+    document.getElementById("FormDiscountCode").style.color = 'red';
+    // AVVISO CHE IL CODICE SCONTO NON E' VALIDO
+    alert("IL CODICE SCONTO NON E' VALIDO")} }
 
 document.getElementById("result").innerHTML = "Prezzo totale: € " + totalPrice.toFixed(2);
 }
